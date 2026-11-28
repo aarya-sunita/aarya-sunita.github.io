@@ -98,7 +98,50 @@
   background: url("images/cover2.jpg") center top / 85% auto no-repeat; /* Or whatever size you had on desktop */
   opacity: 0.4;
   z-index: 0;
-}
+}i
+	
+  /* Keep your other mobile rules (.hero, .hero-inner, .about, .profile, .pub) inside this block */
+
+
+  .hero {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    padding: 24px 0;
+  }
+
+nd-position: center top;
+  }
+
+  .hero-inner {
+    width: 90%;
+    padding-top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about {
+    margin-top: 12px;
+    transform: none; 
+    padding: 16px 20px; 
+    text-align: center;
+  }
+	  .card {
+    padding: 18px 16px; 
+  }
+
+  .pub {
+    flex-direction: column; 
+    align-items: center;
+    gap: 12px;
+  }
+
+  .pub img {
+    width: 100%;
+    max-width: 260px; 
+	  height: auto;
+  }
 }
 /* 2. MOBILE ONLY (Make sure the closing } at the bottom is included) */
 @media (max-width: 768px) {
