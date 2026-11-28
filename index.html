@@ -87,13 +87,32 @@
 	 .profile {
     transform: none;
   }
-	  .hero::before {
-    top: -120px; /* Matches your desktop top offset */
-    bottom: auto; /* Stops the image from stretching to the bottom of the tall mobile hero */
-    height: 450px; /* Adjust this height (e.g., 380px–500px) to match your laptop cover height */
-    background-size: 100% auto; /* Keeps the full width visible without zooming in (or use 85% auto to match desktop) */
+/* 1. DESKTOP (Stays completely untouched) */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: -120px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("images/cover2.jpg") center top / 85% auto no-repeat; /* Or whatever size you had on desktop */
+  opacity: 0.4;
+  z-index: 0;
+}
+}
+/* 2. MOBILE ONLY (Make sure the closing } at the bottom is included) */
+@media (max-width: 768px) {
+  .hero::before {
+    top: 0; /* Changed from -120px so the image isn't pushed off the top of the phone screen */
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: 100% auto; /* Shows the full image width without zooming in */
     background-position: center top;
   }
+
+  /* Keep your other mobile rules (.hero, .hero-inner, .about, .profile, .pub) inside this block */
+
 
   .hero {
     flex-direction: column;
