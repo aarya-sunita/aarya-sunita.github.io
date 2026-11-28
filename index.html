@@ -87,11 +87,6 @@
 	 .profile {
     transform: none;
   }
-  .hero::before {
-    top: 0; 
-    background-size: cover; 
-    background-position: center top;
-  }
 
   .hero {
     flex-direction: column;
@@ -100,7 +95,10 @@
     padding: 24px 0;
   }
 
-nd-position: center top;
+  .hero::before {
+    top: 0;
+    background-size: cover; 
+    background-position: center top;
   }
 
   .hero-inner {
@@ -133,6 +131,7 @@ nd-position: center top;
 	  height: auto;
   }
 }
+
   </style>
 </head>
 <body>
