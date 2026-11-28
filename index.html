@@ -82,14 +82,35 @@
 
     footer { text-align: center; color: #777; font-size: .85rem; margin: 28px 0 8px; }
 
-    @media (max-width: 760px) {
-      .hero { flex-direction: column-reverse; padding: 28px 16px; gap: 20px; }
-      .profile { width: 150px; height: 150px; }
-      .card { padding: 18px; }
-      .pub { flex-direction: column; }
-      .pub img { width: 100%; height: auto; max-height: 220px; }
-    }
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    padding: 24px 0;
+  }
 
+  .hero::before {
+    top: 0;
+    background-size: cover; 
+    background-position: center top;
+  }
+
+  .hero-inner {
+    width: 90%;
+    padding-top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about {
+    margin-top: 12px;
+    transform: none; 
+    padding: 16px 20px; 
+    text-align: center;
+  }
+}
 
   </style>
 </head>
